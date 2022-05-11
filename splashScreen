@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+
+				background: #ffffff;
+			}
+
+			#background {
+				position: fixed;
+				width: 50vw;
+				height: 50vh;
+				bottom: 0;
+				left: 0;
+
+				background: linear-gradient(20deg, #2D3291 0%, #ffffff 40%);
+				background-repeat: no-repeat;
+
+                transition: all 5s ease;
+			}
+
+			#logo {
+				position: fixed;
+				width: 100%;
+				top: calc(50vh - 80px);
+				color: #aaaaaa;
+				font-size: 70px;
+				text-align: center;
+				opacity: 0;
+				transition: all 5s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="logo" src="https://zetaglobal.com/wp-content/uploads/2017/09/Bottom_Logo@2x.png">enKod(BETA)</div>
+		<script>
+			const logo = document.getElementById("logo");
+			const bg = document.getElementById("background");
+
+			setTimeout(() => {
+				logo.style.opacity = 1;
+				bg.style.width = "150vw";
+				bg.style.height = "150vh";
+				//document.body.style.backgroundPosition = "bottom right";
+			}, 200);
+		</script>
+	</body>
+</html>
